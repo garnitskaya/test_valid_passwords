@@ -7,8 +7,7 @@ const arr = [
 const array = arr => {
     let lengthvalidPasswords = 0;
     arr.map(item => {
-        const [l, from, before, password] = item;
-        validPasswords(l, from, before, password) ? lengthvalidPasswords++ : 0;
+        validPasswords(...item) ? lengthvalidPasswords++ : 0;
     });
     return lengthvalidPasswords;
 };
